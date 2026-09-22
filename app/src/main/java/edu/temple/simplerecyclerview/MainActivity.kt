@@ -18,7 +18,10 @@ class MainActivity : AppCompatActivity() {
         recyclerView.layoutManager = GridLayoutManager(this, 4)
 
         // TODO (Step 2: Define lambda to modify displayTextView size)
-        val callback : (Int) -> Unit = {}
+        val callback : (Int) -> Unit = { textSize ->
+            displayTextView.textSize = textSize.toFloat()
+
+        }
 
 
         // Todo (Step 3: Pass lambda to adapter)
